@@ -1,8 +1,15 @@
 # tensorflow-lite-sdk
 
 ## 目标
+
 - **基于Google Tensorflow-Lite，对官方Tensorflow-Lite Demo加以提炼，以更加通用的形式提供一个Tensorflow-Lite Android SDK**
 - **从训练基于TensorFlow的深度学习模型，到把模型运行在Android TensorFlow Lite框架上，本项目提供一个完整的流程和方法**
+
+## Android运行深度神经网络模型，只需要三步
+1. **利用TensorFlow训练一个深度神经网络模型**（这部分不属于本项目内容，自己去学习吧：））
+2. **生成Android平台可用的模型文件tflite** 
+避免踩坑，可参见我的博文：[TensorFlow Lite研究](https://jeremyliao.github.io/ai/2018/08/08/TensorFlow-Lite%E7%A0%94%E7%A9%B6.html)
+3. **利用本项目的SDK**：[tflite-sdk](https://github.com/JeremyLiao/tensorflow-lite-sdk/tree/master/tensorflow-lite-android/tflite-sdk)，继承并实现AbstractImageClassifier或AbstractTFLiteProcessor，就可以在Android平台上利用深度神经网络带来的强大能力了
 
 ## Module
 - SDK Module：[tflite-sdk](https://github.com/JeremyLiao/tensorflow-lite-sdk/tree/master/tensorflow-lite-android/tflite-sdk)
@@ -55,6 +62,3 @@
         });
     }
 ```
-
-## 保存tflite
-这部分内容可参见作者博客：[TensorFlow Lite研究](https://jeremyliao.github.io/ai/2018/08/08/TensorFlow-Lite%E7%A0%94%E7%A9%B6.html)
